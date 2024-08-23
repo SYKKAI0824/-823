@@ -19,12 +19,18 @@ Min Heap 是如何表示的？
 最小堆上的操作：
 
 1.getMin（）：返回 Min Heap 的根元素。此操作的时间复杂度为 O（1）。
+
 2.extractMin（）：从 MinHeap 中删除最小元素。此操作的时间复杂度为 O（Log n），因为此操作需要在删除 root 后维护堆属性（通过调用 heapify（））。
+
 3.insert（）：插入新键需要 O（Log n） 时间。我们在树的末尾添加一个新键。如果新密钥大于其父密钥，则我们不需要执行任何操作。否则，我们需要遍历以修复违反的堆属性。
+
 以下是 Python 中 Min Heap 的实现 –
-# Python3 implementation of Min Heap 
+
+
+
 
   ```
+# Python3 implementation of Min Heap 
  import sys
 
 class MinHeap:
